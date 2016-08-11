@@ -87,7 +87,7 @@ def mail(subject, bodym, sender, receivers, server):
         msg.attach(MIMEText(body, 'plain'))
         text = msg.as_string()
         try:
-            server = smtplib.SMTP('mailgw10.sto.midasplayer.com')
+            server = smtplib.SMTP('some_fancy_server_here')
             server.sendmail(sender, receivers, text)
             print "Successfully sent email"
         except SMTPException:
